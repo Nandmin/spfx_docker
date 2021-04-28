@@ -1,0 +1,1 @@
+docker run -itd --name spfx-dev-env -v ${PWD}:/usr/app/spfx -p 5432:5432 -p 4321:4321 -p 35729:35729 spfx-dev-env
