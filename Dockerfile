@@ -1,4 +1,4 @@
-FROM node:10.24
+FROM ubuntu:20.04
 
 EXPOSE 5432 4321 35729
 
@@ -10,6 +10,10 @@ WORKDIR /usr/app/spfx
 RUN useradd --create-home --shell /bin/bash spfx && \
     usermod -aG sudo spfx && \
     chown -R spfx:spfx /usr/app
+
+RUN apt-get update && apt-get install -y build-essential apt-transport-https lsb-release ca-certificates curl
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN apt-get update && apt-get install -y nodejs
 
 USER spfx
 
