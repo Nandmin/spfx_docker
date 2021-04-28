@@ -3,7 +3,7 @@ Docker spfx development:
 1. get dockerfile
 2. run 'docker build . -t spfx-dev-env' in the dockerfile's folder
 3. cd to the project conatiner dir
-4. run 'docker run -itd --name spfx-dev-env -v ${PWD}:/usr/app/spfx -p 5432:5432 -p 4321:4321 -p 35729:35729 spfx-dev-env'
+4. run docker-run.ps1 there
 5. connect to the conatiner from vscode
 6. add ' "hostname": "0.0.0.0",' to the config/serve.json below https
 7. copy /home/spfx/.gcb-serve-data/gcb-serve.cer to /usr/app/spfx/gcb-serve.cer
